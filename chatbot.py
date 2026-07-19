@@ -60,13 +60,12 @@ def calculate(user_input):
 # MAIN CHATBOT LOOP
 
 def run_chatbot():
-    """Runs the main chatbot loop until the user types an exit command."""
-
+    
     print("=" * 60)
     print(" Welcome to RuleBot — a simple rule-based chatbot!")
     print("=" * 60)
 
-    # Ask for the user's name once, and remember it for the whole session
+    # Remembering user's name 
     user_name = input("Before we start, what's your name? ").strip().title()
     if user_name == "":
         user_name = "Friend"
@@ -115,8 +114,7 @@ def run_chatbot():
         # Simple calculator
         elif user_input_lower.startswith("calculate"):
             print(f"Bot: {calculate(user_input)}")
-
-
+        
         else:
             print("Bot: Sorry, I didn't understand that. Type 'help' to see what I can do.")
 
